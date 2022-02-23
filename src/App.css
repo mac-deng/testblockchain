@@ -1,38 +1,208 @@
-.App {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body,html{
+  height: 100%;
+  width: 100%;
+  background: #1ab6ff;
+}
+.section{
+  width: 1200px;
+  margin: 0 auto;
+}
+.header{
+  height: 90px;
+  background: rgba(255,255,255 ,.3);
+  
+}
+.header .logo{
+  padding: 15px;
+  width: 200px;
+  height: 60px;
+  float: left;
+
+}
+.header ul{
+  float: right;
+  line-height: 90px;
+}
+.header li {float: left;margin-left: 30px;}
+.header li a{text-decoration: none;color: #fff;}
+
+.header .avatar{
+  float: right;
+  margin-left: 40px;
+  height: 60px;
+  padding: 15px 0 ;
+  width: 320px;
+  position: relative;
+}
+.header .avatar .bg1{
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  width: 140px;
+  height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  line-height: 40px;
+  color: #333;
+  padding-left: 10px;
+}
+.header .avatar .bg2{
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  right: 0;
+  width: 220px;
+  height: 60px;
+  border-radius: 60px;
+  background: #df4242;
+  line-height: 60px;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.avatar .avatar-pic-outer{
+  width:50px ;
+  height: 50px;
+  border-radius: 50px;
+  background: #fff;
+  float: right;
+  margin: 5px 10px 0 0 ;
+}
+.avatar .avatar-pic-outer img{
+  display: block;
+  width:46px; 
+  height: 46px;
+  border-radius: 46px;
+  padding: 2px;
+}
+
+.threeColumns {
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-between; /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.threeColumns div {
+    width: 150px;
+    height: 200px;
+}
+
+.tip{
   text-align: center;
+  color: #fff;
+  margin: 40px 0 ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.drops{
+  position: relative;
+  width: 300px;
+  margin: 40px auto;
+
+}
+.drops div{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  cursor: pointer;
+}
+.box1{
+  background-color: coral;
+}
+.box2{
+  background-color: lightblue;
+}
+.box3{
+  background-color: khaki;
+}
+.drops .box2{
+  left: 50px;
+  top: 50px;
+}
+.drops .box3{
+  left: 100px;
+  top: 100px;
+}
+.drops .box1:hover{
+  z-index: 5;
+}
+.drops .box2:hover{
+  z-index: 5;
+}
+.drops .box3:hover{
+  z-index: 5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input{
+  border: none;
+  outline: none;
+  border: 1px  solid #d2d2d2;
+  height: 25px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  width: 300px;
+  margin-right: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button{
+  height: 37px;
+  width: 100px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #d2d2d2;
+  cursor: pointer;
+  border-radius: 3px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.code-temp{
+  margin: 20px 0;
+  padding: 10px;
+  background: #fff;
 }
