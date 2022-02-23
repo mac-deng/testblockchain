@@ -10,19 +10,9 @@ function App() {
   return (
      <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="threeColumns" element={<ThreeColumns />}></Route>
+          <Route index  element={<ThreeColumns />}></Route>
           <Route path="drops" element={<Drops />}></Route>
           <Route path="createAccount" element={<CreateAccount />}></Route>
-
-
-          {/*<Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="dashboard" element={<Dashboard />} />*/}
-
-          {/* Using path="*"" means "match anything", so this route
-                acts like a catch-all for URLs that we don't have explicit
-                routes for. */}
-         {/* <Route path="*" element={<NoMatch />} />*/}
         </Route>
       </Routes>
   );

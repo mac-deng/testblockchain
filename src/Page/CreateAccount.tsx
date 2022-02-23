@@ -4,7 +4,6 @@ import axios from 'axios';
 import { useMoralis } from "react-moralis";
 axios.defaults.timeout = 30000;
 let isLoading=false;
-let textTimer=null;
 
 function CreateAccount() {
 
@@ -67,15 +66,12 @@ function CreateAccount() {
 		  .then( (user)=>{
 		     //console.log("logged in user:", user);
 			setMyAddress(user.get('ethAddress'))
-			console.log(user.get('avatar'))
 		  })
 		  .catch(function (error) {
-			alert(`请安装metamask`)
+			alert(`请确认安装metamask并登录,然后刷新页面`)
 		  });
 		}else{
 			setMyAddress(user.get('ethAddress'))
-			console.log(user.get('avatar'))
-		     //console.log(user.get('ethAddress'));
 		}
 	}
 
